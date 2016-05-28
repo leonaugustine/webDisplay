@@ -1,0 +1,106 @@
+body{
+	position: relative;
+}
+.banner{
+
+	text-align: center;
+}
+.overlay{
+	margin-top: 20px;border-radius:.7em;
+
+background-color: #f2f2f2;
+}
+.nav{
+	float: left;
+	position: fixed;
+    width:150px;
+}
+.nav li a {
+	margin:10px 25px 15px 25px;   
+}		
+.content{
+		float: right;
+	width: 80%;
+	padding-right: 10%;
+}	
+@keyframes expandLines{
+	0%{
+		padding: 0;		
+	}
+	90%{
+		padding: 0 250px;
+	}
+}
+.box{
+	margin: 0 auto;
+	width:50px;
+	height: 2px;
+	background: black;
+	animation-name: expandLines	;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	padding: 0 250px;
+}
+
+.boxWrapper:hover .box{
+	animation-name: expandLines;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	padding: 0 150px;
+}
+
+.square{
+	float:left;
+	display: inline-block;
+	width:80px;
+	height:80px;
+	background: black;
+	border-radius: 50px;
+	line-height:80px;
+	text-align:center;
+	color:grey; 
+	animation-name: revshapeColor;
+	animation-duration: .6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.square:hover {
+	color: grey;
+	animation-name: shapeColor;
+	animation-duration: .6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes shapeColor {
+	0%{
+		background: black;
+		
+		border-radius: 50 50 50 50 ;
+		transform:rotate(0deg);
+	}
+	100%{
+		background: grey;
+    border-radius: 50% 0% 50% 50%;
+		transform:rotate(45deg);
+	}
+
+}
+
+@keyframes revshapeColor {
+	0%{
+		background: grey;
+		border-radius: 50% 0% 50% 50%;
+		transform:rotate(45deg);
+	}
+	100%{	
+		background: black;
+		
+		border-radius: 50 50 50 50;
+		transform:rotate(0deg);
+		
+	}
+
+}
+
+
+

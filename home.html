@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<title>Leon</title>	
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="ownership.css">	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="animate.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	
+	
+</head>
+<body>
+
+<div class="topleft">
+	<div class="square">About<a href="http://cgi.cse.unsw.edu.au/~z5022751/leonaugustine/about.html"></a></div>
+	<div class="slideRight">
+		<br>
+		<kbd>Details</kbd>&nbsp;
+		<kbd> Contact Info</kbd>&nbsp;
+		<kbd>where</kbd>&nbsp;
+		<kbd>Interests</kbd>&nbsp;
+	</div>
+</div>	
+
+<div class="botright">
+
+	<div class="slideLeft"><br>
+		<kbd>Skills</kbd>&nbsp;
+		<kbd>Study</kbd>&nbsp;
+		<kbd>Activities</kbd>&nbsp;
+	</div>
+	<div class="square1">CV</div>
+	
+</div>	
+
+<div class="center">
+	<div class="boxWrapper">
+		<div class="box"></div>
+			<h1> LEON AUGUSTINE</h1>
+			<center><kbd>A comprehensive website</kbd></center>
+			<br>
+			<div class="box"></div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$(".topleft").find(".square").hover(function () { 
+		$('.slideRight').stop(true,true).fadeIn(500);
+	}, function(){ 
+		$('.slideRight').stop(true,true).fadeOut(500);	
+	});
+
+});
+</script>
+<script>
+$(document).ready(function(){
+	$(".botright").find(".square1").hover(function () { 
+		$('.slideLeft').stop(true,true).fadeIn(500);
+	}, function(){ 
+		$('.slideLeft').stop(true,true).fadeOut(500);	
+	});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+div a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slideRight{
+	display:none;
+	float:right;
+	height:20px;	
+	width: 300px;	
+}
+.cov{
+	width:250px;
+	display:inline-block;
+	background:lime;
+
+}
+.slideLeft{
+	display:none;
+	float:left;
+	position: absolute;
+	height:10px;	
+	width: 300px;
+}
+.topleft {
+	width:400px;
+	height:80px;
+	border-radius: 50px;	
+	text-align: center;
+	position:absolute;
+	top:10%;
+	left:10%;
+}
+
+.botright {
+	display: inline-block;
+	text-align: center;
+	position:absolute;
+	bottom:10%;
+	right:10%;
+	width:330px;
+	height:60px;
+}
+
+.square{
+	float:left;
+	display: inline-block;
+	width:80px;
+	height:80px;
+	background: black;
+	border-radius: 50px;
+	line-height:80px;
+	text-align:center;
+	color:grey; 
+	animation-name: revshapeColor;
+	animation-duration: .6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.square1{
+	float:right;
+	
+	width:80px;
+	height:80px;
+	background: black;
+	border-radius: 50px;
+	line-height:80px;
+	text-align:center;
+	color:grey; 
+	animation-name: revshapeColor;
+	animation-duration: .6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.square:hover, .square1:hover {
+	
+	animation-name: shapeColor;
+	animation-duration: .6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shapeColor {
+	0%{
+		background: black;
+		
+		border-radius: 50 50 50 50 ;
+		transform:rotate(0deg);
+	}
+	100%{
+		background: grey;
+		border-radius: 0 50% 50% 50%;
+		transform:rotate(45deg);
+	}
+
+}
+@keyframes revshapeColor {
+	0%{
+		background: grey;
+		border-radius: 0 50% 50% 50%;
+		transform:rotate(45deg);
+	}
+	100%{	
+		background: black;
+		
+		border-radius: 50 50 50 50;
+		transform:rotate(0deg);
+		
+	}
+
+}
+.topright {
+	text-align: center;
+	position:absolute;
+	top:10%;
+	right:10%;
+	width:60px;
+	height:60px;
+
+}
+
+
+.botleft {
+	text-align: center;	
+	position:absolute;
+	bottom:10%;
+	left:10%;
+	width:60px;
+	height:60px;
+
+}
+
+
+.center {
+	position: absolute;
+	top: 50%;
+	left:50%;	
+	transform: translate(-50%,-50%);
+
+}
+
+@keyframes expandLines{
+	0%{
+		padding: 0;		
+	}
+	90%{
+		padding: 0 150px;
+	}
+}
+
+@keyframes collapseLines{
+	0%{
+		padding: 0 150px;		
+	}
+	90%{
+		padding: 0;
+	}
+}
+
+
+.box{
+	
+	margin: auto;
+	width:50px;
+	height: 2px;
+	background: black;
+	animation-name: collapseLines;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+}
+.boxWrapper:hover .box{
+	animation-name: expandLines;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	padding: 0 150px;
+}
+
+
+
+
