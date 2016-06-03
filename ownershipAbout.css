@@ -1,4 +1,19 @@
+.affix {
+      top: 0;
+      width: 100%;
+}
+ body {
+      position: relative; 
+  }
+.affix + .container-fluid {
+	     position: relative;
 
+      padding-top: 58px;
+}
+ .navbar {
+      margin-bottom: 0px;
+  }
+  
 .span-logo {
 	margin-top:-100px;
 	display: inline-block;
@@ -19,6 +34,7 @@ img{
 
 
 .banner{
+	height: 55px;
 	text-align: center;
 }
 
